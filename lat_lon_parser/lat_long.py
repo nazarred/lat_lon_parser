@@ -83,9 +83,9 @@ def to_dec_deg(d=0, m=0, s=0, ustring=False, max=180):
     if m > 60.0 or s > 60.0:
         raise ValueError("Minutes and Seconds have to be between "
                          "-180 and 180")
-
-    if abs(d) > max:
-        raise ValueError("Degrees have to be between -180 and 180")
+    # Comment this because I'd like that I can pass coordinates in UTM format
+    # if abs(d) > max:
+    #     raise ValueError("Degrees have to be between -180 and 180")
 
     if signbit(d):
         Sign = -1
